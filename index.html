@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Proposal</title>
+    <style>
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: red;
+        }
+        .buttons {
+            position: relative;
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #yes {
+            background-color: green;
+            color: white;
+        }
+        #no {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my Valentine? ❤️</h1>
+    <div class="buttons">
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById("no");
+        const yesBtn = document.getElementById("yes");
+        let noClicked = false;
+
+        noBtn.addEventListener("mouseover", () => {
+            if (!noClicked) {
+                let x = Math.random() * window.innerWidth -100;
+                let y = Math.random() * window.innerHeight -50;
+                noBtn.style.left = `${x}px`;
+                noBtn.style.top = `${y}px`;
+            }
+        });
+
+        setTimeout(() => {
+            noClicked = true;
+            noBtn.innerText = "Yes";
+            noBtn.style.backgroundColor = "green";
+        }, 5000);
+
+        yesBtn.addEventListener("click", () => {
+            window.location.href = "thankyou.html";
+        });
+    </script>
+</body>
+</html>
