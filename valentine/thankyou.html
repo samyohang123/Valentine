@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightpink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: red;
+        }
+        video {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 1000px;
+            height: auto;
+        }
+       .images{
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 100px;
+        height: auto;
+       }
+    </style>
+</head>
+<body>
+    <h1>Thank You for Saying Yes! ❤️</h1>
+    <p>Here’s a special video for you!</p>
+    <video controls autoplay>
+        <source src="ok.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <img src="oh.png" alt="us" class="images">
+</body>
+</html>
